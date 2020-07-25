@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>This is the title of the webpage!</title>
+  </head>
+  <body>
+      <div class="startscreen">
+        <div class="box">
+            <p class="instructions">Press START to begin. <br/>Use arrow keys to move.<br/>If you collide with other cars you lose!</p>
+            <Button class="b-button start-game">START</Button>
+        </div>
+        
+      </div>
+      <div class="gamescreen hide">
+        <aside class="box">
+          <div class ="score"></div>
+          <Button class="b-button restart-game">RESTART</Button>
+          <Button class="b-button pause-game">PAUSE</Button>
+        </aside>
+        <section class="gameArea">
+        </section>
+        <div class="gameOver hide">OOPS!!! <br/>GAME OVER!!!</div>
+      </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gameArea {
+    background-color: black;
+    min-height:750px;
+    width: 500px;
+    position: relative;
+    margin:auto;
+    border: 5px solid grey;
+}
+
+.gamescreen {
+    display: flex;
+}
+
+.gameOver {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 30px;
+    text-align:center;
+    border-radius: 20px;
+    background-color: darkred;
+    color: white
+}
+
+.box {
+    height: 250px;
+    background-color: black;
+    padding: 20px;
+    justify-content: center;
+    color:white;
+}
+
+.startscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    min-height:90vh;
+}
+
+.instructions {
+    align-self: center;
+    text-align: center;
+    background-color: olive;
+    color: white;
+    padding: 50px;
+    border-radius: 10px
+}
+
+.b-button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 20px;
+    width: 130px;
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+.score {
+    background-color: rgb(159, 185, 63);
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    max-width: 130px;
+    margin-bottom: 20px;
+    align-self: center;
+    display: block
+}
+
+.pause-game {
+    background-color: orange;
+}
+
+.line {
+    width: 10px;
+    position: absolute;
+    margin-left: 245px;
+    height: 100px;
+    background-color: white;
+}
+
+.enemy {
+    position: absolute;
+    bottom: 10px;
+    margin: auto;
+    width: 50px;
+    height: 100px;
+    background-image: url("car2.png");
+    background-size: cover;
+}
+.car {
+    position: absolute;
+    bottom: 10px;
+    margin: auto;
+    width: 50px;
+    height: 100px;
+    background-image: url(car.png);
+    color: white;
+    background-size: cover;
+}
