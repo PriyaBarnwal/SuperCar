@@ -28,7 +28,7 @@ body {
 }
 
 .box {
-    height: 250px;
+    height: 280px;
     background-color: black;
     padding: 20px;
     justify-content: center;
@@ -72,7 +72,7 @@ body {
     display: none
 }
 
-.score {
+.score, .high-score {
     background-color: rgb(159, 185, 63);
     border: none;
     color: white;
@@ -83,6 +83,10 @@ body {
     margin-bottom: 20px;
     align-self: center;
     display: block
+}
+
+.high-score {
+    background: chocolate;
 }
 
 .pause-game {

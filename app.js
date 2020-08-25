@@ -2,13 +2,16 @@ const startScreen = document.querySelector('.startscreen'),
   gamescreen = document.querySelector('.gamescreen'),
   gamearea = document.querySelector('.gameArea'),
   scoreArea = document.querySelector('.score'),
-  gameOver = document.querySelector('.gameOver')
+  gameOver = document.querySelector('.gameOver'),
+  highScoreArea = document.querySelector('.high-score')
+
 
 let keys = {},
   player = {},
   speed = 5,
   //colors = ["red", "green", "pink", "blue", "yellow"],
-  enemies = {}
+  enemies = {},
+  highScore = localStorage.getItem('highScore') || 0 
 
 moveRoadDown = () => {
   let lines = document.querySelectorAll('.line')
@@ -23,9 +26,7 @@ moveRoadDown = () => {
 isCollision = (item1, item2) => {
   let one = item1.getBoundingClientRect(),
     two = item2.getBoundingClientRect()
-    if(!(
-      (one.bottom < two.top) || (one.top > two.bottom) || (one.right < two.left) || (one.left >= two.right)))
-      console.log(one, two)
+    
   return !(
     (one.bottom < two.top) || (one.top > two.bottom) || (one.right-5 < two.left) || (one.left >= two.right))
 
@@ -84,6 +85,11 @@ step = (timestamp) => {
     car.style.top = player.y +'px'
     player.score+=1
     scoreArea.innerHTML = `SCORE: ${player.score}`
+    if(highScore < player.score) {
+      highScore = player.score
+      localStorage.setItem('highScore', highScore)
+      highScoreArea.innerHTML = `your high score: ${highScore}`
+    }
     window.requestAnimationFrame(step)
   }
   
@@ -101,6 +107,8 @@ pressOff = (e) => {
 
 initialise = () => {
   gamearea.innerHTML = ''
+  highScoreArea.innerHTML = `your high Score: ${highScore}`
+  scoreArea.innerHTML = `SCORE: 0`
   keys['ArrowUp'] = false
   keys['ArrowDown'] = false
   keys['ArrowLeft'] = false
